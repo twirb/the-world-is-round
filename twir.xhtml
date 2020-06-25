@@ -9,56 +9,16 @@
 <head>
   <title>The World is Round</title>
   <meta name="author" content="Tony Rothman"/>
-  <style>
-    html {
-        max-width: 40em;
-        margin: 0 auto;
-        font-family: Georgia;
-    }
-
-    /* Apply the "no-close-quote" class to a 'q' element for which the final
-       quotation mark should be hidden, that is, for a quotation in which the
-       speaker continues to speak in the next paragraph. */
-    q.no-close-quote:after { quotes: none }
-
-    blockquote { font-style: oblique }
-    blockquote strong { font-style: normal }
-    .footnote { font-size: smaller }
-    .footnote::before { content: "———"; display: block }
-    .equation { text-align: center }
-    h1, h2, .author { text-align: center }
-    .chapter-number {
-        display: block;
-        font-size: smaller;
-        font-variant: small-caps;
-        break-after: always;
-    }
-
-    table {
-	margin-left: auto;
-	margin-right: auto;
-    }
-
-    hr {
-        background: none;
-        border: 0;
-        margin: 0.5em 0;
-        padding: 0;
-    }
-    hr::after {
-        content: '★ ★ ★ ★ ★';
-        display: block;
-        line-height: 1;
-        text-align: center;
-        font-style: normal;
-    }
-  </style>
+  <link rel="stylesheet" href="twir.css"/>
+  <link rel="icon" href="icon.svg"/>
+  <link rel="mask-icon" href="icon.svg"/> <!-- for Apple Safari -->
+  <meta name="author" content="Tony Rothman"/>
 </head>
 <body>
   <h1>The World is Round</h1>
 
   <p class="author">
-    by Tony Rothman
+    by <a href="https://www.tonyrothman.com/">Tony Rothman</a>
   </p>
   
   <h2>Prologue</h2>

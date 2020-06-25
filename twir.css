@@ -1,0 +1,31 @@
+/* twir.css */
+/*
+     Apply the "no-close-quote" class to a <q>...</q> for which the final
+     quotation mark should be hidden, that is, for a quotation in which the
+     speaker continues to speak in the next paragraph.
+*/
+q.no-close-quote:after {quotes: none}
+
+body, table {margin: 1em auto; max-width: 45em; text-align: center;
+ font-variant-numeric: lining-nums; font-feature-settings: "lnum"; font-family: Georgia}
+a {color: blue; text-decoration: none}
+a:hover {color: red} a:focus {color: lime; outline: none}
+h1,h2,h3,h4 {font-variant: small-caps}
+h1 {font-size: 1.5em}
+h2 {font-size: 1.25em}
+h2::before {display: block; content: url("icon.svg")}
+h3 {font-size: 1em}
+h4 {font-size: 1em; font-weight: normal}
+p, li, blockquote {text-align: justify}
+td {text-align: left}
+blockquote {font-style: italic}
+blockquote strong {font-style: normal}
+hr {border: 0}
+hr::before {content: "★ ★ ★ ★ ★"}
+.author {font-variant: small-caps; font-weight: bold}
+.footnote {font-size: smaller}
+.footnote::before {content: "———"; display: block}
+.author {text-align: center}
+.chapter-number {display: block; font-size: smaller; font-variant: small-caps; break-after: always}
+
+/* 2 tables: search for "1 clad", "Stala-Konndjlan" */

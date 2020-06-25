@@ -26,6 +26,6 @@ all-forbidden: forbidden-words
 	    LC_ALL=C sort -u > $@
 
 clean:
-	rm -f spellcheck bad-words words allowed-words all-allowed all-forbidden
+	rm -f spellcheck bad-words words dictionary all-allowed all-forbidden
 
 .DELETE_ON_ERROR:
