@@ -70,8 +70,9 @@ def itermosttext(element):
 
 handle_element(tree.getroot())
 
-word_re = re.compile(r'[+–\s​,—–−!?…;:*=().]+')
+word_re = re.compile(r'[+–\s​—–−…*=()]+')
 for text in itermosttext(tree.getroot()):
     for word in word_re.split(text):
+        word = word.rstrip('.!?,;:')
         if len(word):
             print(word)

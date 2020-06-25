@@ -18,3 +18,4 @@
   - mobi
 
 * "timelines"/"timlikes"
+* "leatil"

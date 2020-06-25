@@ -2,12 +2,13 @@ all: spellcheck
 
 spellcheck: bad-words
 	@if test -s bad-words; then \
-		grep -n -w --color=auto -f bad-words twir.xhtml /dev/null; \
+		grep -F -n -w --color=auto -f bad-words twir.xhtml /dev/null; \
 		echo "Potential spelling errors above.  Fix them one of the following ways:"; \
 		echo "- Fix actual spelling errors in 'twir.xhtml'."; \
 		echo "- Add common dictionary words to 'common-words'."; \
 		echo "- Add special vocabulary to 'special-words'."; \
 		echo "(Run 'make' in a terminal to highlight error candidates'."; \
+		echo "See 'bad-words' for a list of the words highlighted above."; \
 		exit 1; \
 	else \
 		: > $@; \
