@@ -1,6 +1,9 @@
-/dictionary
-/spellcheck
-/words
 /all-allowed
 /all-forbidden
 /bad-words
+/dictionary
+/spellcheck
+/twir_[0-9][0-9].xhtml
+/twir_[0-9].xhtml
+/twir.epub
+/words

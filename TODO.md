@@ -17,5 +17,6 @@
   - epub
   - mobi
 
-* "timelines"/"timlikes"
+* "timelines"/"timlikes"?
 * "leatil"
+* ask Tony about comma-separated numbers in stala list?

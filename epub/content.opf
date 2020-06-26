@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+  <metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:calibre="http://calibre.kovidgoyal.net/2009/metadata" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:language>en</dc:language>
+    <dc:creator opf:file-as="Unknown" opf:role="aut">Tony Rothman</dc:creator>
+    <dc:title>The World is Round</dc:title>
+    <meta name="cover" content="cover"/>
+    <dc:identifier id="uuid_id" opf:scheme="uuid">3d4783cb-3c64-4911-8dd7-9474b02031ed</dc:identifier>
+  </metadata>
+  <manifest>
+    <item href="cover.jpg" id="cover" media-type="image/jpeg"/>
+    <item href="icon.svg" id="icon" media-type="image/svg+xml"/>
+    <item href="twir.css" id="page_css" media-type="text/css"/>
+    <item href="twir_1.xhtml" id="html1" media-type="application/xhtml+xml"/>
+    <item href="twir_2.xhtml" id="html2" media-type="application/xhtml+xml"/>
+    <item href="twir_3.xhtml" id="html3" media-type="application/xhtml+xml"/>
+    <item href="twir_4.xhtml" id="html4" media-type="application/xhtml+xml"/>
+    <item href="twir_5.xhtml" id="html5" media-type="application/xhtml+xml"/>
+    <item href="twir_6.xhtml" id="html6" media-type="application/xhtml+xml"/>
+    <item href="twir_7.xhtml" id="html7" media-type="application/xhtml+xml"/>
+    <item href="twir_8.xhtml" id="html8" media-type="application/xhtml+xml"/>
+    <item href="twir_9.xhtml" id="html9" media-type="application/xhtml+xml"/>
+    <item href="twir_10.xhtml" id="html10" media-type="application/xhtml+xml"/>
+    <item href="twir_11.xhtml" id="html11" media-type="application/xhtml+xml"/>
+    <item href="twir_12.xhtml" id="html12" media-type="application/xhtml+xml"/>
+    <item href="twir_13.xhtml" id="html13" media-type="application/xhtml+xml"/>
+    <item href="twir_14.xhtml" id="html14" media-type="application/xhtml+xml"/>
+    <item href="twir_15.xhtml" id="html15" media-type="application/xhtml+xml"/>
+    <item href="twir_16.xhtml" id="html16" media-type="application/xhtml+xml"/>
+    <item href="twir_17.xhtml" id="html17" media-type="application/xhtml+xml"/>
+    <item href="twir_18.xhtml" id="html18" media-type="application/xhtml+xml"/>
+    <item href="twir_19.xhtml" id="html19" media-type="application/xhtml+xml"/>
+    <item href="twir_20.xhtml" id="html20" media-type="application/xhtml+xml"/>
+    <item href="twir_21.xhtml" id="html21" media-type="application/xhtml+xml"/>
+    <item href="twir_22.xhtml" id="html22" media-type="application/xhtml+xml"/>
+    <item href="twir_23.xhtml" id="html23" media-type="application/xhtml+xml"/>
+    <item href="twir_24.xhtml" id="html24" media-type="application/xhtml+xml"/>
+    <item href="twir_25.xhtml" id="html25" media-type="application/xhtml+xml"/>
+    <item href="twir_26.xhtml" id="html26" media-type="application/xhtml+xml"/>
+    <item href="twir_27.xhtml" id="html27" media-type="application/xhtml+xml"/>
+    <item href="twir_28.xhtml" id="html28" media-type="application/xhtml+xml"/>
+    <item href="twir_29.xhtml" id="html29" media-type="application/xhtml+xml"/>
+    <item href="twir_30.xhtml" id="html30" media-type="application/xhtml+xml"/>
+    <item href="twir_31.xhtml" id="html31" media-type="application/xhtml+xml"/>
+    <item href="twir_32.xhtml" id="html32" media-type="application/xhtml+xml"/>
+    <item href="twir_33.xhtml" id="html33" media-type="application/xhtml+xml"/>
+    <item href="twir_34.xhtml" id="html34" media-type="application/xhtml+xml"/>
+    <item href="twir_35.xhtml" id="html35" media-type="application/xhtml+xml"/>
+    <item href="twir_36.xhtml" id="html36" media-type="application/xhtml+xml"/>
+    <item href="twir_37.xhtml" id="html37" media-type="application/xhtml+xml"/>
+    <item href="twir_38.xhtml" id="html38" media-type="application/xhtml+xml"/>
+    <item href="twir_39.xhtml" id="html39" media-type="application/xhtml+xml"/>
+    <item href="twir_40.xhtml" id="html40" media-type="application/xhtml+xml"/>
+    <item href="titlepage.xhtml" id="titlepage" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="titlepage"/>
+    <itemref idref="html1"/>
+    <itemref idref="html2"/>
+    <itemref idref="html3"/>
+    <itemref idref="html4"/>
+    <itemref idref="html5"/>
+    <itemref idref="html6"/>
+    <itemref idref="html7"/>
+    <itemref idref="html8"/>
+    <itemref idref="html10"/>
+    <itemref idref="html11"/>
+    <itemref idref="html12"/>
+    <itemref idref="html13"/>
+    <itemref idref="html14"/>
+    <itemref idref="html15"/>
+    <itemref idref="html16"/>
+    <itemref idref="html17"/>
+    <itemref idref="html18"/>
+    <itemref idref="html19"/>
+    <itemref idref="html20"/>
+    <itemref idref="html21"/>
+    <itemref idref="html22"/>
+    <itemref idref="html23"/>
+    <itemref idref="html24"/>
+    <itemref idref="html25"/>
+    <itemref idref="html26"/>
+    <itemref idref="html27"/>
+    <itemref idref="html28"/>
+    <itemref idref="html29"/>
+    <itemref idref="html30"/>
+    <itemref idref="html31"/>
+    <itemref idref="html32"/>
+    <itemref idref="html33"/>
+    <itemref idref="html34"/>
+    <itemref idref="html35"/>
+    <itemref idref="html36"/>
+    <itemref idref="html37"/>
+    <itemref idref="html38"/>
+    <itemref idref="html39"/>
+    <itemref idref="html40"/>
+  </spine>
+  <guide>
+    <reference href="titlepage.xhtml" title="Cover" type="cover"/>
+  </guide>
+</package>
