@@ -10,20 +10,18 @@ def html_ns(tag):
 def ab_ns(tag):
     return "{%s}%s" % (ns['ab'], tag)
 
+import sys
+target_chapter = int(sys.argv[1])
+output_file = sys.argv[2]
+
 ET.register_namespace('', ns['html'])
 ET.register_namespace('ab', ns['ab'])
 tree = ET.parse('twir.xhtml')
-n_chapters = len(tree.findall('./html:body/html:h2', ns))
-assert n_chapters == 40
-for i in range(1, n_chapters + 1):
-    tree = ET.parse('twir.xhtml')
-    chapter = 0
-    body = tree.find('./html:body', ns)
-    for e in list(body):
-        if e.tag == html_ns('h2'):
-            chapter += 1
-        if chapter != i:
-            body.remove(e)
-    tree.write('twir_%d.xhtml' % i,
-               encoding='UTF-8',
-               xml_declaration=True)
+chapter = 0
+body = tree.find('./html:body', ns)
+for e in list(body):
+    if e.tag == html_ns('h2'):
+        chapter += 1
+    if chapter != target_chapter:
+        body.remove(e)
+tree.write(output_file, encoding='UTF-8', xml_declaration=True)

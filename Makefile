@@ -1,5 +1,12 @@
 all: spellcheck twir.epub
 
+PYTHON3 = python3
+twir_%.xhtml: twir.xhtml split.py
+	$(PYTHON3) split.py $(patsubst twir_%.xhtml,%,$(@F)) $@
+toc.ncx: twir.xhtml toc.py toc-skeleton.xml
+	$(PYTHON3) toc.py $@
+epub/toc.ncx: toc.ncx
+
 # This dependency list is the output of "git ls-files epub"
 twir.epub: epub/META-INF/container.xml epub/content.opf			\
 	epub/cover.jpg epub/icon.svg epub/mimetype			\
@@ -16,7 +23,8 @@ twir.epub: epub/META-INF/container.xml epub/content.opf			\
 	epub/twir_35.xhtml epub/twir_36.xhtml epub/twir_37.xhtml	\
 	epub/twir_38.xhtml epub/twir_39.xhtml epub/twir_4.xhtml		\
 	epub/twir_40.xhtml epub/twir_5.xhtml epub/twir_6.xhtml		\
-	epub/twir_7.xhtml epub/twir_8.xhtml epub/twir_9.xhtml
+	epub/twir_7.xhtml epub/twir_8.xhtml epub/twir_9.xhtml		\
+	epub/toc.ncx
 	rm -f $@ && cd epub && zip --quiet ../twir.epub $(patsubst epub/%,%,$^)
 
 ## ------------- ##
@@ -38,7 +46,7 @@ spellcheck: bad-words
 bad-words: words dictionary
 	LC_ALL=C comm -23 words dictionary > $@
 words: twir.xhtml check.py
-	./check.py | LC_ALL=C sort -u > $@
+	$(PYTHON3) check.py | LC_ALL=C sort -u > $@
 dictionary: all-allowed all-forbidden
 	LC_ALL=C comm -23 all-allowed all-forbidden > $@
 all-allowed: common-words special-words
@@ -49,7 +57,7 @@ all-forbidden: forbidden-words
 
 clean:
 	rm -f spellcheck bad-words words dictionary all-allowed all-forbidden
-	rm -f twir.epub
-	rm -f 
+	rm -f twir.epub toc.ncx
+	rm -f twir_[0-9].xhtml twir_[0-9][0-9].xhtml
 
 .DELETE_ON_ERROR:
