@@ -10,7 +10,10 @@
 * Versions:
   - One chapter per file.
   - mobi
-* SVG in EPUB?
+* EPUB problems:
+  - Ignores <q>.
+  - Cover art renders badly
+  - SVG renders badly or not at all
 
 * "timelines"/"timlikes"?
 * "leatil"
