@@ -75,12 +75,13 @@ if output_type == 'web':
                            {'id': 'nav-dropdown',
                             'onchange': '''\
 var e = document.getElementById("nav-dropdown"); \
-var value = e.options[e.selectedIndex].value; \
-window.location.href="twir_" + value + ".xhtml";
+window.location.href = e.options[e.selectedIndex].value;\
 '''})
     select.tail = ' '
+    ET.SubElement(select, 'option', {'value': 'index.xhtml'}).text = 'Home'
     for chapter, number in zip(content, range(len(content))):
-        option = ET.SubElement(select, 'option', {'value': '%d' % number})
+        option = ET.SubElement(select, 'option',
+                               {'value': "twir_%s.xhtml" % number})
         option.text = chapter['title']
         if number == target_chapter:
             option.set('selected', 'true')
