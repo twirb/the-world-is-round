@@ -25,6 +25,6 @@ hr::before {content: "★ ★ ★ ★ ★"}
 .author {font-variant: small-caps; font-weight: bold}
 .credits p {font-size: smaller; text-align:center}
 .footnote {font-size: smaller}
-.footnote::before {content: "———"; display: block}
-.chapter-number {font-size: smaller}
+.footnote::before {content: "⸻"; display: block}
+nav, .chapter-number {font-size: smaller}
 /* 2 tables: search for "1 clad", "Stala-Konndjlan" */

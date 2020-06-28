@@ -13,7 +13,7 @@ a:hover {color: red} a:focus {color: lime; outline: none}
 h1,h2,h3,h4 {font-variant: small-caps}
 h1 {font-size: 1.5em}
 h2 {font-size: 1.25em}
-h2::before {display: block; content: url("icon.svg")}
+h2::after {display: block; content: url("icon.svg")}
 h3 {font-size: 1em}
 h4 {font-size: 1em; font-weight: normal}
 p, li, blockquote {text-align: justify}

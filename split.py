@@ -13,20 +13,92 @@ def ab_ns(tag):
 import sys
 target_chapter = int(sys.argv[1])
 output_file = sys.argv[2]
+output_type = sys.argv[3]
 
+def chapter_title_text(element):
+    tag = element.tag
+    if not isinstance(tag, str) and tag is not None:
+        return
+
+    t = element.text
+    if t:
+        yield t
+        if tag == html_ns("div"):
+            yield ": "
+    for e in element:
+        yield from chapter_title_text(e)
+        t = e.tail
+        if t:
+            yield t
+
+def commit(content, unit):
+    title = ''.join(chapter_title_text(unit[0]))
+    title = title.rstrip('*')
+    title = re.sub('\s+', ' ', title)
+    content += [{'title': title, 'content': unit}]
+
+def get_content(et):
+    content = []
+
+    n_h2 = 0
+    body = et.find('./html:body', ns)
+    unit = []
+    for e in body:
+        if e.tag == html_ns('h2'):
+            if n_h2 > 0:
+                commit(content, unit)
+                unit = []
+            n_h2 += 1
+        unit += [e]
+    commit(content, unit)
+    return content
+    
 ET.register_namespace('', ns['html'])
 ET.register_namespace('ab', ns['ab'])
-tree = ET.parse('twir.xhtml')
-n_h2 = 0
-chapter = 1
-body = tree.find('./html:body', ns)
-for e in list(body):
-    if e.tag == html_ns('h2'):
-        n_h2 += 1
-        if n_h2 != 1:
-            chapter += 1
-        #print('%d (%s) -> %d' % (n_h2, ''.join(e.itertext()), chapter))
-    if chapter != target_chapter:
-        body.remove(e)
-assert chapter == 41
-tree.write(output_file, encoding='UTF-8', xml_declaration=True)
+et = ET.parse('twir.xhtml')
+content = get_content(et)
+
+#for x, y in zip(content, range(len(content))):
+#    print(y, x['title'])
+html = et.find('.', ns)
+title = et.find('./html:head/html:title', ns)
+title.text += ', %s' % content[target_chapter]['title']
+
+if output_type == 'web':
+    nav = ET.Element('nav')
+    if target_chapter > 0:
+        prev = ET.SubElement(nav, 'a',
+                             {'href': 'twir_%d.xhtml' % (target_chapter - 1)})
+        prev.text = '« Prev'
+        prev.tail = ' '
+    select = ET.SubElement(nav, 'select',
+                           {'id': 'nav-dropdown',
+                            'onchange': '''\
+var e = document.getElementById("nav-dropdown"); \
+var value = e.options[e.selectedIndex].value; \
+window.location.href="twir_" + value + ".xhtml";
+'''})
+    select.tail = ' '
+    for chapter, number in zip(content, range(len(content))):
+        option = ET.SubElement(select, 'option', {'value': '%d' % number})
+        option.text = chapter['title']
+        if number == target_chapter:
+            option.set('selected', 'true')
+    if target_chapter < len(content) - 1:
+        next = ET.SubElement(nav, 'a',
+                             {'href': 'twir_%d.xhtml' % (target_chapter + 1)})
+        next.text = 'Next »'
+else:
+    nav = None
+
+# Remove existing body.
+html.remove(et.find('./html:body', ns))
+
+# Insert new body.
+body = ET.SubElement(html, 'body')
+if nav:
+    body.append(nav)
+body.extend(content[target_chapter]['content'])
+if nav:
+    body.append(nav)
+et.write(output_file, encoding='UTF-8', xml_declaration=True)
