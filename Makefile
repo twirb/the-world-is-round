@@ -24,6 +24,7 @@ twir.epub: epub/META-INF/container.xml epub/content.opf			\
 	epub/twir_38.xhtml epub/twir_39.xhtml epub/twir_4.xhtml		\
 	epub/twir_40.xhtml epub/twir_5.xhtml epub/twir_6.xhtml		\
 	epub/twir_7.xhtml epub/twir_8.xhtml epub/twir_9.xhtml		\
+	epub/twir_41.xhtml \
 	epub/toc.ncx epub/f1.svg epub/f2.svg epub/f3.svg
 	rm -f $@ && cd epub && zip --quiet ../twir.epub $(patsubst epub/%,%,$^)
 

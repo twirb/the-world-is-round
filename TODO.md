@@ -5,6 +5,10 @@
   - Limit XML elements and attributes (and classes, e.g. "no-close-quote").
   - now/not
   - an/and
+* Proofreading:
+  - Read it
+  - Compare against book
+  - Grammar checking
 * Styling:
   - Definition for "teclad" etc. "light meters" "Golun-Patras"
 * Versions:

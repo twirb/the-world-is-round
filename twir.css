@@ -23,6 +23,7 @@ blockquote strong {font-style: normal}
 hr {border: 0}
 hr::before {content: "★ ★ ★ ★ ★"}
 .author {font-variant: small-caps; font-weight: bold}
+.credits p {font-size: smaller; text-align:center}
 .footnote {font-size: smaller}
 .footnote::before {content: "———"; display: block}
 .chapter-number {font-size: smaller}

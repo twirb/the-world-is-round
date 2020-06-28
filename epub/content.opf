@@ -49,11 +49,11 @@
     <item href="twir_36.xhtml" id="html36" media-type="application/xhtml+xml"/>
     <item href="twir_37.xhtml" id="html37" media-type="application/xhtml+xml"/>
     <item href="twir_38.xhtml" id="html38" media-type="application/xhtml+xml"/>
-    <item href="twir_39.xhtml" id="html39" media-type="application/xhtml+xml"/>
+    <item href="twir_40.xhtml" id="html39" media-type="application/xhtml+xml"/>
     <item href="f1.svg" id="f1" media-type="image/svg+xml"/>
     <item href="f2.svg" id="f2" media-type="image/svg+xml"/>
     <item href="f3.svg" id="f3" media-type="image/svg+xml"/>
-    <item href="twir_40.xhtml" id="html40" media-type="application/xhtml+xml"/>
+    <item href="twir_41.xhtml" id="html41" media-type="application/xhtml+xml"/>
     <item href="titlepage.xhtml" id="titlepage" media-type="application/xhtml+xml"/>
     <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
   </manifest>
@@ -98,6 +98,7 @@
     <itemref idref="html38"/>
     <itemref idref="html39"/>
     <itemref idref="html40"/>
+    <itemref idref="html41"/>
   </spine>
   <guide>
     <reference href="titlepage.xhtml" title="Cover" type="cover"/>

@@ -30,16 +30,19 @@ def chapter_title_text(element):
             yield t
 
 nav_map = ET.Element('navMap')
-chapter = 0
+n_h2 = 0
+chapter = 1
 for h2 in ET.parse('twir.xhtml').findall('./html:body/html:h2', ns):
-    chapter += 1
+    n_h2 += 1
+    if n_h2 != 1:
+        chapter += 1
     nav_point = ET.SubElement(nav_map, 'navPoint', {'playOrder': '%d' % chapter})
     nav_label = ET.SubElement(nav_point, 'navLabel')
     text = ET.SubElement(nav_label, 'text')
     title = ''.join(chapter_title_text(h2))
     text.text = re.sub('\s+', ' ', title.rstrip('*'))
     ET.SubElement(nav_point, 'content', {'src': 'twir_%d.xhtml' % chapter})
-
+assert chapter == 41
 ET.register_namespace('', 'http://www.daisy.org/z3986/2005/ncx/')
 output = ET.parse('toc-skeleton.xml')
 output.getroot().append(nav_map)

@@ -17,11 +17,16 @@ output_file = sys.argv[2]
 ET.register_namespace('', ns['html'])
 ET.register_namespace('ab', ns['ab'])
 tree = ET.parse('twir.xhtml')
-chapter = 0
+n_h2 = 0
+chapter = 1
 body = tree.find('./html:body', ns)
 for e in list(body):
     if e.tag == html_ns('h2'):
-        chapter += 1
+        n_h2 += 1
+        if n_h2 != 1:
+            chapter += 1
+        #print('%d (%s) -> %d' % (n_h2, ''.join(e.itertext()), chapter))
     if chapter != target_chapter:
         body.remove(e)
+assert chapter == 41
 tree.write(output_file, encoding='UTF-8', xml_declaration=True)
