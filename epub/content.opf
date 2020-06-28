@@ -8,7 +8,7 @@
     <dc:identifier id="uuid_id" opf:scheme="uuid">3d4783cb-3c64-4911-8dd7-9474b02031ed</dc:identifier>
   </metadata>
   <manifest>
-    <item href="cover.jpg" id="cover" media-type="image/jpeg"/>
+    <item href="cover.png" id="cover" media-type="image/png"/>
     <item href="icon.svg" id="icon" media-type="image/svg+xml"/>
     <item href="twir.css" id="page_css" media-type="text/css"/>
     <item href="twir_0.xhtml" id="html0" media-type="application/xhtml+xml"/>
