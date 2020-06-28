@@ -1,32 +1,25 @@
 all: spellcheck twir.epub
 
 PYTHON3 = python3
-twir_%.xhtml: twir.xhtml split.py
+epub/twir_%.xhtml: twir.xhtml split.py
 	$(PYTHON3) split.py $(patsubst twir_%.xhtml,%,$(@F)) $@
-toc.ncx: twir.xhtml toc.py toc-skeleton.xml
+epub/toc.ncx: twir.xhtml toc.py toc-skeleton.xml
 	$(PYTHON3) toc.py $@
-epub/toc.ncx: toc.ncx
 
 # This dependency list is the output of "git ls-files epub"
-twir.epub: epub/META-INF/container.xml epub/content.opf			\
-	epub/cover.jpg epub/icon.svg epub/mimetype			\
-	epub/titlepage.xhtml epub/twir.css epub/twir_1.xhtml		\
-	epub/twir_10.xhtml epub/twir_11.xhtml epub/twir_12.xhtml	\
-	epub/twir_13.xhtml epub/twir_14.xhtml epub/twir_15.xhtml	\
-	epub/twir_16.xhtml epub/twir_17.xhtml epub/twir_18.xhtml	\
-	epub/twir_19.xhtml epub/twir_2.xhtml epub/twir_20.xhtml		\
-	epub/twir_21.xhtml epub/twir_22.xhtml epub/twir_23.xhtml	\
-	epub/twir_24.xhtml epub/twir_25.xhtml epub/twir_26.xhtml	\
-	epub/twir_27.xhtml epub/twir_28.xhtml epub/twir_29.xhtml	\
-	epub/twir_3.xhtml epub/twir_30.xhtml epub/twir_31.xhtml		\
-	epub/twir_32.xhtml epub/twir_33.xhtml epub/twir_34.xhtml	\
-	epub/twir_35.xhtml epub/twir_36.xhtml epub/twir_37.xhtml	\
-	epub/twir_38.xhtml epub/twir_39.xhtml epub/twir_4.xhtml		\
-	epub/twir_40.xhtml epub/twir_5.xhtml epub/twir_6.xhtml		\
-	epub/twir_7.xhtml epub/twir_8.xhtml epub/twir_9.xhtml		\
-	epub/twir_41.xhtml \
-	epub/toc.ncx epub/f1.svg epub/f2.svg epub/f3.svg
-	rm -f $@ && cd epub && zip --quiet ../twir.epub $(patsubst epub/%,%,$^)
+
+seq = 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 \
+24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40
+epub_files =					\
+	$(patsubst %,twir_%.xhtml,$(seq))	\
+	META-INF/container.xml			\
+	content.opf				\
+	f1.svg f2.svg f3.svg			\
+	titlepage.xhtml				\
+	toc.ncx					\
+	twir.css
+twir.epub: $(addprefix epub/,$(epub_files))
+	rm -f $@ && cd epub && zip --quiet ../twir.epub $(epub_files)
 
 ## ------------- ##
 ## Spellchecking ##
@@ -58,7 +51,7 @@ all-forbidden: forbidden-words
 
 clean:
 	rm -f spellcheck bad-words words dictionary all-allowed all-forbidden
-	rm -f twir.epub toc.ncx
-	rm -f twir_[0-9].xhtml twir_[0-9][0-9].xhtml
+	rm -f twir.epub epub/toc.ncx
+	rm -f epub/twir_[0-9].xhtml epub/twir_[0-9][0-9].xhtml
 
 .DELETE_ON_ERROR:
