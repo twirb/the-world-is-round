@@ -15,8 +15,6 @@
   - One chapter per file.
   - mobi
 * EPUB problems:
-  - Ignores <q>.
-  - Cover art renders badly
   - SVG renders badly or not at all
 
 * "timelines"/"timlikes"?

@@ -53,9 +53,39 @@ def get_content(et):
     commit(content, unit)
     return content
     
+def fix_quotes(parent, quote_level = 0):
+    for e in parent:
+        if ab_ns('speaker') in e.attrib:
+            del e.attrib[ab_ns('speaker')]
+        if e.tag == html_ns('q'):
+            fix_quotes(e, quote_level + 1)
+            e.tag = html_ns('span')
+
+            left = '“‘'[quote_level % 2]
+            right = '”’'[quote_level % 2]
+
+            if e.text:
+                e.text = left + e.text
+            else:
+                e.text = left
+
+            if e.get('class') == 'no-close-quote':
+                del e.attrib['class']
+            elif len(e):
+                if e[-1].tail is None:
+                    e[-1].tail = right
+                else:
+                    e[-1].tail += right
+            else:
+                e.text += right
+        else:
+            fix_quotes(e, quote_level)
+
 ET.register_namespace('', ns['html'])
 ET.register_namespace('ab', ns['ab'])
 et = ET.parse('twir.xhtml')
+fix_quotes(et.getroot())
+
 content = get_content(et)
 
 #for x, y in zip(content, range(len(content))):
