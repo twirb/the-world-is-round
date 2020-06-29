@@ -55,8 +55,6 @@ def get_content(et):
     
 def fix_quotes(parent, quote_level = 0):
     for e in parent:
-        if ab_ns('speaker') in e.attrib:
-            del e.attrib[ab_ns('speaker')]
         if e.tag == html_ns('q'):
             fix_quotes(e, quote_level + 1)
             e.tag = html_ns('span')
@@ -81,10 +79,31 @@ def fix_quotes(parent, quote_level = 0):
         else:
             fix_quotes(e, quote_level)
 
+def fix_chapter_numbers(et):
+    for e in et.findall('.//html:div[@class="chapter-number"]', ns):
+        e.tag = 'span'
+        e.text += ': '
+        del e.attrib["class"]
+
+def remove_ab(et):
+    for e in et.iter():
+        for key in list(e.keys()):
+            if key.startswith('{%s}' % ns['ab']):
+                del e.attrib[key]
+
+def remove_icon(et):
+    head = et.find('.//html:head', ns)
+    icon = head.find('./html:link[@rel="icon"]', ns)
+    head.remove(icon)
+
 ET.register_namespace('', ns['html'])
 ET.register_namespace('ab', ns['ab'])
 et = ET.parse('twir.xhtml')
-fix_quotes(et.getroot())
+if output_type == 'epub':
+    fix_quotes(et.getroot())
+    fix_chapter_numbers(et)
+    remove_icon(et)
+    remove_ab(et)
 
 content = get_content(et)
 

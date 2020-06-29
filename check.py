@@ -43,7 +43,7 @@ allow_html("table")
 allow_html("tr")
 allow_html("td")
 allow_html("sup")
-allow_html("img", (('src',)))
+allow_html("img", (('src', 'alt')))
 
 def handle_element(node):
     if node.tag in allowed:

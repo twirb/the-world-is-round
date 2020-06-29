@@ -58,7 +58,8 @@ if output_type == 'epub':
     nav_map = ET.Element('navMap')
     for chapter, number in zip(content, range(len(content))):
         nav_point = ET.SubElement(nav_map, 'navPoint',
-                                  {'playOrder': '%d' % (number + 1)})
+                                  {'playOrder': '%d' % (number + 1),
+                                   'id': 'navPoint%d' % (number + 1)})
         nav_label = ET.SubElement(nav_point, 'navLabel')
         text = ET.SubElement(nav_label, 'text')
         text.text = chapter['title']

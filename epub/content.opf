@@ -55,7 +55,6 @@
     <item href="f1.svg" id="f1" media-type="image/svg+xml"/>
     <item href="f2.svg" id="f2" media-type="image/svg+xml"/>
     <item href="f3.svg" id="f3" media-type="image/svg+xml"/>
-    <item href="twir_41.xhtml" id="html41" media-type="application/xhtml+xml"/>
     <item href="titlepage.xhtml" id="titlepage" media-type="application/xhtml+xml"/>
     <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
   </manifest>
@@ -70,6 +69,7 @@
     <itemref idref="html6"/>
     <itemref idref="html7"/>
     <itemref idref="html8"/>
+    <itemref idref="html9"/>
     <itemref idref="html10"/>
     <itemref idref="html11"/>
     <itemref idref="html12"/>
@@ -101,7 +101,6 @@
     <itemref idref="html38"/>
     <itemref idref="html39"/>
     <itemref idref="html40"/>
-    <itemref idref="html41"/>
   </spine>
   <guide>
     <reference href="titlepage.xhtml" title="Cover" type="cover"/>

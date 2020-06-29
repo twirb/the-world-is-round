@@ -25,11 +25,11 @@
        refX="20.5"
        refY="13"
        orient="auto"
-       id="marker left arrow">
+       id="marker_left_arrow">
       <path
          style="display:inline;fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
          d="m 23,12 -5,1 5,1 z"
-         id="left arrow"
+         id="left_arrow"
          sodipodi:nodetypes="cccc" />
     </marker>
     <marker
@@ -38,10 +38,10 @@
        refX="27.5"
        refY="13"
        orient="auto"
-       id="marker right arrow">
+       id="marker_right_arrow">
       <path
          sodipodi:nodetypes="cccc"
-         id="right arrow"
+         id="right_arrow"
          d="m 25,12 5,1 -5,1 z"
          style="display:inline;fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
     </marker>
@@ -116,7 +116,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;line-height:1.25;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px"
        x="384.58267"
        y="525.03778"
-       id="Figure 1"><tspan
+       id="Figure_1"><tspan
          sodipodi:role="line"
          id="tspan1514"
          x="384.58267"
@@ -183,7 +183,7 @@
        cy="216"
        r="24" />
     <text
-       id="moon text"
+       id="moon_text"
        y="443.70453"
        x="192.13997"
        style="font-size:13.3333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;text-anchor:middle"
@@ -208,7 +208,7 @@
        style="font-size:13.3333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;text-anchor:middle"
        x="576.013"
        y="443.70453"
-       id="venus text"><tspan
+       id="venus_text"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:serif;-inkscape-font-specification:serif"
          sodipodi:role="line"
          id="tspan3083-1"
@@ -266,43 +266,43 @@
        sodipodi:nodetypes="cscc" />
     <path
        id="rot11"
-       style="fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker right arrow)"
+       style="fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker_right_arrow)"
        d="m 228,96 c 0,19.875 -16.125,36 -36,36 -19.875,0 -36,-16.125 -36,-36 0,-19.875 16.125,-36 36,-36"
        sodipodi:nodetypes="czzc" />
     <path
        sodipodi:nodetypes="czzc"
        d="m 312,252 c -19.875,0 -36,-16.125 -36,-36 0,-19.875 16.125,-36 36,-36 19.875,0 36,16.125 36,36"
-       style="fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker right arrow)"
+       style="fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker_right_arrow)"
        id="rot12" />
     <path
        id="rot13"
-       style="fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker right arrow)"
+       style="fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker_right_arrow)"
        d="m 156,336 c 0,-19.875 16.125,-36 36,-36 19.875,0 36,16.125 36,36 0,19.875 -16.125,36 -36,36"
        sodipodi:nodetypes="czzc" />
     <path
        id="rot14"
-       style="fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker right arrow)"
+       style="fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker_right_arrow)"
        d="m 72,180 c 19.875,0 36,16.125 36,36 0,19.875 -16.125,36 -36,36 -19.875,0 -36,-16.125 -36,-36"
        sodipodi:nodetypes="czzc" />
     <path
        sodipodi:nodetypes="czzc"
        d="m 576,132 c -19.875,0 -36,-16.125 -36,-36 0,-19.875 16.125,-36 36,-36 19.875,0 36,16.125 36,36"
-       style="fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#marker left arrow)"
+       style="fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#marker_left_arrow)"
        id="rot21" />
     <path
        sodipodi:nodetypes="czzc"
        d="m 732,216 c 0,19.875 -16.125,36 -36,36 -19.875,0 -36,-16.125 -36,-36 0,-19.875 16.125,-36 36,-36"
-       style="fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#marker left arrow)"
+       style="fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#marker_left_arrow)"
        id="rot22" />
     <path
        sodipodi:nodetypes="czzc"
        d="m 576,300 c 19.875,0 36,16.125 36,36 0,19.875 -16.125,36 -36,36 -19.875,0 -36,-16.125 -36,-36"
-       style="fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#marker left arrow)"
+       style="fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#marker_left_arrow)"
        id="rot23" />
     <path
        sodipodi:nodetypes="czzc"
        d="m 420,216 c 0,-19.875 16.125,-36 36,-36 19.875,0 36,16.125 36,36 0,19.875 -16.125,36 -36,36"
-       style="fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#marker left arrow)"
+       style="fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#marker_left_arrow)"
        id="rot24" />
     <text
        id="Moon"
@@ -350,35 +350,35 @@
          style="text-align:center;text-anchor:middle">Sun</tspan></text>
     <path
        id="rev11"
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker right arrow)"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker_right_arrow)"
        d="M 81.599413 168.97117 A 120 120 0 0 1 138.87377 108.40072 " />
     <path
        id="rev12"
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker right arrow)"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker_right_arrow)"
        d="M 239.02883 105.59941 A 120 120 0 0 1 299.59928 162.87377 " />
     <path
        id="rev13"
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker right arrow)"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker_right_arrow)"
        d="M 302.40059 263.02883 A 120 120 0 0 1 245.12623 323.59928 " />
     <path
        id="rev14"
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker right arrow)"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker_right_arrow)"
        d="M 144.97117 326.40059 A 120 120 0 0 1 84.400722 269.12623 " />
     <path
        d="m 465.59941,168.97117 a 120,120 0 0 1 57.27436,-60.57045"
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker right arrow)"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker_right_arrow)"
        id="rev21" />
     <path
        d="m 623.02883,105.59941 a 120,120 0 0 1 60.57045,57.27436"
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker right arrow)"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker_right_arrow)"
        id="rev22" />
     <path
        d="m 686.40059,263.02883 a 120,120 0 0 1 -57.27436,60.57045"
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker right arrow)"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker_right_arrow)"
        id="rev23" />
     <path
        d="m 528.97117,326.40059 a 120,120 0 0 1 -60.57045,-57.27436"
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker right arrow)"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker_right_arrow)"
        id="rev24" />
   </g>
 </svg>

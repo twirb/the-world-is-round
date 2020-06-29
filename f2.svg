@@ -25,11 +25,11 @@
        refX="20.5"
        refY="13"
        orient="auto"
-       id="marker left arrow">
+       id="marker_left_arrow">
       <path
          style="display:inline;fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
          d="m 23,12 -5,1 5,1 z"
-         id="left arrow"
+         id="left_arrow"
          sodipodi:nodetypes="cccc" />
     </marker>
     <marker
@@ -38,10 +38,10 @@
        refX="27.5"
        refY="13"
        orient="auto"
-       id="marker right arrow">
+       id="marker_right_arrow">
       <path
          sodipodi:nodetypes="cccc"
-         id="right arrow"
+         id="right_arrow"
          d="m 25,12 5,1 -5,1 z"
          style="display:inline;fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
     </marker>
@@ -127,11 +127,11 @@
        sodipodi:cy="383.87448"
        sodipodi:cx="384.47067"
        sodipodi:type="arc"
-       id="plane of ecliptic"
+       id="plane_of_ecliptic"
        style="fill:#000000;fill-opacity:0.25;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
     <ellipse
        style="fill:none;fill-opacity:0.25;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
-       id="plane of ecliptic border"
+       id="plane_of_ecliptic_border"
        cx="384"
        cy="384"
        rx="288"
@@ -147,11 +147,11 @@
        sodipodi:cx="-2.7656777e-05"
        sodipodi:type="arc"
        transform="rotate(-45)"
-       id="circle of latitude"
+       id="circle_of_latitude"
        style="fill:#000000;fill-opacity:0.252918;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
     <ellipse
        style="fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
-       id="circle of latitude border"
+       id="circle_of_latitude_border"
        cx="-2.7656777e-05"
        cy="419.50677"
        rx="72"
@@ -168,8 +168,8 @@
        sodipodi:cy="384"
        sodipodi:cx="384"
        sodipodi:type="arc"
-       id="s arrow"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#marker left arrow)" />
+       id="s_arrow"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#marker_left_arrow)" />
     <path
        d="m -20.328593,433.98839 a 78,15 0 0 1 -40.896387,-5.18795"
        sodipodi:arc-type="arc"
@@ -182,8 +182,8 @@
        sodipodi:cx="-2.7656777e-05"
        sodipodi:type="arc"
        transform="rotate(-45)"
-       id="p arrow"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#marker left arrow)" />
+       id="p_arrow"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#marker_left_arrow)" />
     <ellipse
        cy="543.05798"
        cx="5.6843419e-14"
@@ -333,7 +333,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;line-height:1.25;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px;stroke-linecap:round"
        x="95.264328"
        y="549.4668"
-       id="Figure 2"><tspan
+       id="Figure_2"><tspan
          sodipodi:role="line"
          id="tspan1514"
          x="95.264328"
@@ -345,15 +345,15 @@
        id="planet"
        style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
     <path
-       id="equator midline"
+       id="equator_midline"
        d="m 485.625,282.375 c -67.874,67.876 -135.374,135.376 -203.25,203.25"
        style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        sodipodi:nodetypes="cc" />
     <path
        sodipodi:nodetypes="cc"
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker left arrow)"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker_left_arrow)"
        d="m 186,450 c 72.00053,-24.00018 126.00053,-42.00018 198,-66"
-       id="s1 vector" />
+       id="s1_vector" />
     <circle
        style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.25"
        id="sun0"
@@ -371,7 +371,7 @@
        style="font-style:italic;font-size:13.3333px;line-height:1.25;font-family:serif;-inkscape-font-specification:'serif Italic';letter-spacing:0px;word-spacing:0px"
        x="260.19009"
        y="261.58398"
-       id="Planetary Axis"><tspan
+       id="Planetary_Axis"><tspan
          sodipodi:role="line"
          id="tspan2461"
          x="260.19009"
@@ -423,7 +423,7 @@
     <text
        xml:space="preserve"
        style="font-size:13.3333px;line-height:1.25;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px"
-       id="Circle of Latitude"
+       id="Circle_of_Latitude"
        y="223.14458"
        x="347.21225"><tspan
          sodipodi:role="line"
@@ -437,7 +437,7 @@
          id="tspan2492"
          style="text-align:end;text-anchor:end">Latitude</tspan></text>
     <text
-       id="p̅∠αt"
+       id="p_vec_angle_alpha_t"
        y="282.64908"
        x="247.48698"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;line-height:1.25;font-family:serif;-inkscape-font-specification:serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start"
@@ -458,7 +458,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;line-height:1.25;font-family:serif;-inkscape-font-specification:serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start"
        x="218.01953"
        y="345.64908"
-       id="p̅∠0°"><tspan
+       id="p_vec_angle_theta"><tspan
          sodipodi:role="line"
          x="218.01953"
          y="345.64908"
@@ -469,7 +469,7 @@
            style="font-size:65%;baseline-shift:sub"
            id="tspan2899">∠0°</tspan></tspan></text>
     <text
-       id="Plane of Ecliptic"
+       id="Plane_of_Ecliptic"
        y="307.34506"
        x="575.26434"
        style="font-size:13.3333px;line-height:1.25;font-family:serif;-inkscape-font-specification:serif;letter-spacing:0px;word-spacing:0px"
@@ -483,7 +483,7 @@
          x="575.26434"
          sodipodi:role="line">Ecliptic</tspan></text>
     <text
-       id="s̅∠0°"
+       id="s_vec_angle_zero"
        y="387.64111"
        x="60.825191"
        style="font-size:13.3333px;line-height:1.25;font-family:serif;-inkscape-font-specification:serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start"
@@ -502,7 +502,7 @@
        style="font-size:13.3333px;line-height:1.25;font-family:serif;-inkscape-font-specification:serif;text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start"
        x="174.73698"
        y="455.21417"
-       id="s̅∠βt"><tspan
+       id="s_vec_angle_beta_t"><tspan
          style="text-align:end;text-anchor:end"
          id="tspan2987"
          sodipodi:role="line"
@@ -592,12 +592,12 @@
        sodipodi:cy="384"
        sodipodi:cx="384"
        sodipodi:type="arc"
-       id="ξ0 arrow"
-       style="display:inline;fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;marker-start:url(#marker left arrow);marker-end:url(#marker right arrow)"
+       id="ξ0_arrow"
+       style="display:inline;fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;marker-start:url(#marker_left_arrow);marker-end:url(#marker_right_arrow)"
        sodipodi:open="true" />
     <path
-       style="fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;marker-start:url(#marker left arrow);marker-end:url(#marker right arrow)"
-       id="ξ1 arrow"
+       style="fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;marker-start:url(#marker_left_arrow);marker-end:url(#marker_right_arrow)"
+       id="ξ1_arrow"
        sodipodi:type="arc"
        sodipodi:cx="384"
        sodipodi:cy="384"
@@ -619,11 +619,11 @@
        sodipodi:cy="384"
        sodipodi:cx="384"
        sodipodi:type="arc"
-       id="ϕ arrow"
-       style="display:inline;fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;marker-start:url(#marker left arrow);marker-end:url(#marker right arrow)" />
+       id="ϕ_arrow"
+       style="display:inline;fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;marker-start:url(#marker_left_arrow);marker-end:url(#marker_right_arrow)" />
     <path
-       style="display:inline;fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;marker-start:url(#marker left arrow);marker-end:url(#marker right arrow)"
-       id="θ arrow"
+       style="display:inline;fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;marker-start:url(#marker_left_arrow);marker-end:url(#marker_right_arrow)"
+       id="θ_arrow"
        sodipodi:type="arc"
        sodipodi:cx="384"
        sodipodi:cy="384"
@@ -636,37 +636,37 @@
        d="m 357.41412,266.98209 a 120,120 0 0 1 108.58666,29.40586" />
     <path
        sodipodi:nodetypes="cc"
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker left arrow);marker-end:url(#marker right arrow)"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker_left_arrow);marker-end:url(#marker_right_arrow)"
        d="m 72,384 h 624"
-       id="x axis" />
+       id="x_axis" />
     <path
-       id="y axis"
+       id="y_axis"
        d="m 311.25,528.75 145.5,-289.5"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker left arrow);marker-end:url(#marker right arrow)"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker_left_arrow);marker-end:url(#marker_right_arrow)"
        sodipodi:nodetypes="cc" />
     <path
        sodipodi:nodetypes="cc"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker left arrow);marker-end:url(#marker right arrow)"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker_left_arrow);marker-end:url(#marker_right_arrow)"
        d="m 384,222 v 324"
-       id="z axis" />
+       id="z_axis" />
     <path
-       id="planetary axis"
+       id="planetary_axis"
        d="m 269.625,269.625 228.75,228.75"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker left arrow);marker-end:url(#marker right arrow)"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker_left_arrow);marker-end:url(#marker_right_arrow)"
        sodipodi:nodetypes="cc" />
     <path
-       id="p0 vector"
+       id="p0_vector"
        d="m 227.625,343.125 156.375,40.875"
-       style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker left arrow)"
+       style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker_left_arrow)"
        sodipodi:nodetypes="cc" />
     <path
        sodipodi:nodetypes="cc"
-       style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker left arrow)"
+       style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker_left_arrow)"
        d="m 258.375,282.375 125.625,101.625"
-       id="p1 vector" />
+       id="p1_vector" />
     <path
        sodipodi:nodetypes="cc"
-       id="p2 vector"
+       id="p2_vector"
        d="m 384,384 -36,-137.25"
        style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
@@ -679,7 +679,7 @@
        r="168"
        cy="384"
        cx="384"
-       id="circle guide"
+       id="circle_guide"
        style="opacity:1;fill:none;fill-opacity:0.252918;stroke:#000000;stroke-width:0.1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
   </g>
 </svg>

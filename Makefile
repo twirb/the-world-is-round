@@ -1,4 +1,4 @@
-all: spellcheck twir.epub twir.zip
+all: spellcheck twir.epub epubcheck twir.zip
 
 PYTHON3 = python3
 
@@ -28,21 +28,29 @@ twir.zip: web
 ## epub ##
 ## ---- ##
 epub_files =						\
+	mimetype \
 	$(patsubst %,twir_%.xhtml,$(chapter_numbers))	\
 	META-INF/container.xml				\
 	content.opf					\
 	cover.png					\
-	f1.svg f2.svg f3.svg				\
+	icon.svg f1.svg f2.svg f3.svg			\
 	titlepage.xhtml					\
 	toc.ncx						\
 	twir.css
 twir.epub: $(addprefix epub/,$(epub_files))
-	rm -f $@ && cd epub && zip --quiet ../twir.epub $(epub_files)
+	rm -f $@ && cd epub && zip --quiet -X ../twir.epub $(epub_files)
 
 epub/twir_%.xhtml: twir.xhtml split.py
 	$(PYTHON3) split.py $(patsubst twir_%.xhtml,%,$(@F)) $@ epub
 epub/toc.ncx: twir.xhtml toc.py toc-skeleton.xml
 	$(PYTHON3) toc.py $@ epub
+
+epubcheck: twir.epub
+	if (epubcheck -version 2>/dev/null | grep -q EPUBCheck); then \
+		epubcheck twir.epub; \
+	else \
+		echo "epubcheck not installed, skipping check"; \
+	fi && touch $@
 
 ## ------------- ##
 ## Spellchecking ##
@@ -76,5 +84,6 @@ clean:
 	rm -f spellcheck bad-words words dictionary all-allowed all-forbidden
 	rm -f twir.epub epub/toc.ncx
 	rm -f epub/twir_[0-9].xhtml epub/twir_[0-9][0-9].xhtml
+	rm -f epubcheck
 
 .DELETE_ON_ERROR:
