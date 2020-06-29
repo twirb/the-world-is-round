@@ -96,6 +96,10 @@ def remove_icon(et):
     icon = head.find('./html:link[@rel="icon"]', ns)
     head.remove(icon)
 
+def convert_img(et):
+    for e in et.findall('.//html:img', ns):
+        e.attrib["src"] = e.attrib["src"].replace('svg', 'png')
+
 ET.register_namespace('', ns['html'])
 ET.register_namespace('ab', ns['ab'])
 et = ET.parse('twir.xhtml')
@@ -104,6 +108,7 @@ if output_type == 'epub':
     fix_chapter_numbers(et)
     remove_icon(et)
     remove_ab(et)
+    convert_img(et)
 
 content = get_content(et)
 

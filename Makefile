@@ -33,7 +33,7 @@ epub_files =						\
 	META-INF/container.xml				\
 	content.opf					\
 	cover.png					\
-	icon.svg f1.svg f2.svg f3.svg			\
+	icon.svg f1.png f2.png f3.png			\
 	titlepage.xhtml					\
 	toc.ncx						\
 	twir.css
@@ -44,6 +44,8 @@ epub/twir_%.xhtml: twir.xhtml split.py
 	$(PYTHON3) split.py $(patsubst twir_%.xhtml,%,$(@F)) $@ epub
 epub/toc.ncx: twir.xhtml toc.py toc-skeleton.xml
 	$(PYTHON3) toc.py $@ epub
+epub/%.png: %.svg
+	convert -density 400 $< $@
 
 epubcheck: twir.epub
 	if (epubcheck -version 2>/dev/null | grep -q EPUBCheck); then \

@@ -6,7 +6,7 @@
 */
 q.no-close-quote:after {quotes: none}
 
-body, table {margin: 1em auto; max-width: 45em; text-align: center;
+body, table {margin: 1em auto; max-width: 48em; text-align: center;
  font-variant-numeric: lining-nums; font-feature-settings: "lnum"; font-family: Georgia}
 a {color: blue; text-decoration: none}
 a:hover {color: red} a:focus {color: lime; outline: none}
@@ -23,8 +23,7 @@ blockquote strong {font-style: normal}
 hr {border: 0}
 hr::before {content: "★ ★ ★ ★ ★"}
 .author {font-variant: small-caps; font-weight: bold}
-.credits p {font-size: smaller; text-align:center}
+.chapter-number {font-size: smaller}
 .footnote {font-size: smaller}
-.footnote::before {content: "⸻"; display: block}
-nav, .chapter-number {font-size: smaller}
+.footnote::before {display: block; text-decoration: line-through; content: "———"}
 /* 2 tables: search for "1 clad", "Stala-Konndjlan" */
