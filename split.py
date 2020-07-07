@@ -79,6 +79,13 @@ def fix_quotes(parent, quote_level = 0):
         else:
             fix_quotes(e, quote_level)
 
+def fix_apostrophes(et):
+    for e in et.find('.//html:body', ns).iter():
+        if e.text is not None:
+            e.text = e.text.replace("'", "’")
+        if e.tail is not None:
+            e.tail = e.tail.replace("'", "’")
+
 def fix_chapter_numbers(et):
     for e in et.findall('.//html:div[@class="chapter-number"]', ns):
         e.tag = 'span'
@@ -109,6 +116,7 @@ if output_type == 'epub':
     remove_icon(et)
     remove_ab(et)
     convert_img(et)
+fix_apostrophes(et.getroot())
 
 content = get_content(et)
 
