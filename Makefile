@@ -2,7 +2,7 @@ all: spellcheck twir.epub epubcheck twir.zip
 
 PYTHON3 = python3
 
-chapter_numbers := $(shell seq 0 41)
+chapter_numbers := $(shell seq 0 42)
 
 ## ------- ##
 ## webpage ##
