@@ -27082,7 +27082,7 @@
     Barbalan and Valyavar smiled, and they all laughed again.
   </p>
 
-  <h2>Appendix: Days and Nights on Patra-Bannk</h2>
+  <h2>Appendix: Days and Nights on Patra-Bannk<br/>(Revised 2020)</h2>
 
   <p>
     On Earth, because its period of rotation is so short compared to its period
@@ -27113,78 +27113,118 @@
   <div><img title="Figure 1" alt="[Figure 1]" src="f1.svg"/></div>
 
   <p>
-    While writing <em>The World is Round</em> I became interested in the
+    While writing <i>The World is Round</i> I became interested in the
     daylength for a planet whose relative rates of rotation and revolution were
-    arbitrary. I also wanted to take the tilt of the planet into account, which
-    made the problem very difficult to visualize. Many diagrams were drawn to
-    set up the problem but the combined sketch is reproduced in Figure 2.
+    arbitrary. I also wanted to take the tilt of the planet into account. To
+    keep matters fairly simple, the orbit of the planet was assumed to be
+    circular, not elliptical. The final diagram used to set up the problem is
+    reproduced in Figure 2.
   </p>
 
   <div><img title="Figure 2" alt="[Figure 2]" src="f2.svg"/></div>
 
   <p>
     The trick in doing the problem is to pretend the sun is revolving around
-    the planet rather than vice-versa. Without belaboring the details, you can
-    see by examining Figure 2 that an observer at point P rotates around his
-    circle of latitude at rate <i>α</i>. The sun rotates around the planet at
-    rate <i>β</i> (which is by definition 360 degrees per sidereal year. A
-    sidereal year is the time for one revolution of the sun around a point
-    fixed in space at the planet). We must find <i>ξ</i>, the angle between the
-    observer's zenith and the sun, and we must do this for any time
-    <i>t</i>. We want to get <i>ξ</i> for any rate of rotation <i>α</i>; any
-    tilt of planet <i>ϕ</i>; and any latitude <i>θ</i>. After a rather tedious
-    calculation (which anyone with a good background in spherical trigonometry
-    and lots of patience might try) one finds:
+    the planet rather than vice-versa. (In fact, an easier way to set up the
+    problem than shown here is to assume the planetary rotation axis is
+    vertical, along the z-axis, and that the sun’s orbital plane, the plane of
+    the ecliptic, is tilted by an angle <i>ϕ</i>.)
   </p>
 
-  <div class="equation">
+  <p>
+    In either case, you can see by examining Figure 2 that an observer at point
+    P rotates around his or her circle of latitude at rate <i>α</i>. The sun
+    rotates around the planet at rate <i>β</i>, which is by definition 360
+    degrees per sidereal year. (A sidereal year is the time for one revolution
+    of the sun around a point fixed in space from the point of view at the
+    planet. For the story I assumed that the sun was moving in the opposite
+    direction from the planet's rotation, and so <i>β</i> = -360.)
+  </p>
+
+  <p>
+    We must find <i>ξ</i>, the angle between the observer's zenith and the sun,
+    and we need to do this for any time
+    <i>t</i>. We want <i>ξ</i> for any rate of rotation <i>α</i>; any tilt of
+    planet <i>ϕ</i>; and any latitude <i>θ</i>. By definition, cos <i>ξ</i> is
+    the dot product between the unit vectors <b><i>p̅</i></b>
+    and <b><i>s̅</i></b>, and so one must find the components of these vectors
+    in terms of the required angles and simply multiply them together. Using
+    standard spherical trigonometry the result is:
+  </p>
+
+  <div>
     cos <i>ξ</i> = (cos <i>θ</i> cos <i>ϕ</i> cos <i>αt</i> +
     sin <i>θ</i> sin <i>ϕ</i>) cos <i>βt</i> +
-    cos <i>θ</i> sin <i>αt</i> sin <i>βt</i>.
+    cos <i>θ</i> sin <i>αt</i> sin <i>βt</i>
   </div>
 
   <p>
-    Obviously, to get <i>ξ</i> we take the inverse cosine of this equation but
-    just obviously no one in his right mind would do such a thing. It is best
-    to solve for <i>ξ</i> numerically on a programmable poculator or an IBM
-    360-65 computer, if you want to get fancy, and then plot <i>ξ</i> versus
-    <i>t</i>. This is just what has been done in Figure 3. We have incremented
-    <i>t</i> from <i>0</i> upward in small values until the day-night cycle
-    began repeating itself. For each value of <i>t</i> we have actually plotted
-    90° − <i>ξ</i> which is the angle of sun above the horizon instead of the
-    angle from the zenith. Time is in sidereal years which was just an easy way
-    to solve the problem. For the purposes of the story you can take one
-    sidereal year as 1000 Earth days. Thus, on the graph, .2 sidereal years is
-    200 Earth days, etc. With a finer scale you would see that the Weird Bannk
-    lasts 181 Earth days, while the Killer Bannk lasts 240.
+    To get <i>ξ</i>, finally, we take the inverse cosine of this equation, and
+    then plot <i>ξ</i> versus <i>t</i>. This should be done numerically with
+    whatever app you prefer, and the result is shown in Figure 3. We have
+    incremented <i>t</i> from 0 upward in small values until the day-night
+    cycle began repeating itself. For each value of <i>t</i> we have actually
+    plotted 90° − <i>ξ</i> which is the angle of sun above the horizon instead
+    of the angle from the zenith. Time is in sidereal years which was just an
+    easy way to solve the problem. For the purposes of the story you can take
+    one sidereal year as 1000 Earth days. Thus, on the graph, .2 sidereal years
+    is 200 Earth days, etc. With a finer scale you would see that the Weird
+    Bannk lasts 181 Earth days, while the Killer Bannk lasts 240.
   </p>
 
   <div><img title="Figure 3" alt="[Figure 3]" src="f3.svg"/></div>
 
-  <h2>About the Author</h2>
+  <h2>Autobiographical Note 2020</h2>
 
   <p>
-    Tony Rothman was born in Philadelphia in 1953 and attended his first
-    science-fiction convention when he was 3 months old, thus starting his
-    career at an early age. He later attended Swarthmore College in
-    Pennsylvania where he masqueraded as a physics major but <q>spent as much
-    time concertizing on the oboe, teaching fencing, writing for the school
-    paper, and chairing organizations of questionable nature.</q> After
-    graduating from Swarthmore in 1975, he spent a semester at Cambridge
-    University in England, studying theoretical astrophysics and writing
-    <em>The World is Round.</em> He is now a graduate student in the physics
-    department of the University of Texas in Austin where he hopes to receive
-    his Ph.D. at the Center for Relativity Theory.
+    <i>The World is Round</i> was written mostly in 1975, immediately after my
+    graduation from Swarthmore College. I have occasionally been asked whether
+    it is true that I started writing it during final exams period in order to
+    avoid studying. Yes. Though I had been planning the book throughout the
+    school year, I did begin the writing during finals, to the considerable
+    detriment of my grades. During the summer the unfinished manuscript was
+    accidentally left in the trunk of a car while I was hitchhiking around
+    Scotland, but miraculously returned overnight to the hostel where I was
+    staying. I can only surmise that the taxi driver whom I had unsuccessfully
+    hired to find the missing car finally came across it, but I never
+    discovered exactly how the miracle came to pass.
   </p>
 
   <p>
-    For diversion he spends his summers working at the National Radio Astronomy
-    Observatory in Green Bank, West Virginia, or traveling to various places
-    around the world.
+    I wrote much, if not most, of <i>The World is Round</i> the following
+    semester while studying at Cambridge University in England, finishing it in
+    1976. It was published by Ballantine/Del Rey Books in 1978, by which time I
+    was a graduate student at the physics department at The University of
+    Texas, Austin. My doctoral research on big bang cosmology was carried out
+    at The Center for Relativity there, and I received a PhD from UT in 1981.
   </p>
 
   <p>
-    He is presently single. His ambition is to compose music.
+    After graduation I did post-doctoral fellowships at Oxford, Moscow State
+    University, and The University of Cape Town. Since those days I have taught
+    physics at a number of universities, among them Princeton, Harvard, and
+    NYU. At the same time I have continued to write and to date have published
+    twelve books, both fiction and nonfiction. As of 2020, I have retired from
+    teaching and am currently writing a <q>Little Book on the Big Bang</q> for
+    Harvard University Press.
+  </p>
+
+  <p>
+    Although <i>The World is Round</i> was my first published book, and for
+    that reason holds a special place in my heart, it was written by a much
+    younger man with whom I no longer have much in common. I doubt I would have
+    ever undertaken to have it republished, and so let me take this opportunity
+    to thank Ben Pfaff and Christina Palmer, two unknown fans of the novel, who
+    entirely of their own accord decided that this long out-of-print work
+    should be made available in electronic format. As <i>The World is Round</i>
+    was originally published before the advent of digital media, the decision
+    was made to input the text manually and to redraw the appendix figures from
+    scratch. The project entailed an enormous amount of work, and all credit
+    goes to them.
+  </p>
+
+  <p>
+    —Tony Rothman, Princeton, August 2020
   </p>
 </body>
 </html>

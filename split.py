@@ -19,6 +19,8 @@ def chapter_title_text(element):
     tag = element.tag
     if not isinstance(tag, str) and tag is not None:
         return
+    if tag == html_ns("br"):
+        yield " "
 
     t = element.text
     if t:
