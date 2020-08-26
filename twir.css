@@ -22,5 +22,4 @@ blockquote {font-style: italic}
 blockquote strong {font-style: normal}
 hr {border: 0}
 hr::before {content: "★ ★ ★ ★ ★"}
-.author {font-variant: small-caps; font-weight: bold}
 /* 2 tables: search for "1 clad", "Stala-Konndjlan" */

@@ -30,6 +30,7 @@ allow_html("style")
 allow_html("body")
 allow_html("h1")
 allow_html("h2")
+allow_html("h3")
 allow_html("p", style_attributes + ab_attributes)
 allow_html("blockquote", ab_attributes)
 allow_html("div", style_attributes + ab_attributes)
@@ -44,6 +45,7 @@ allow_html("tr")
 allow_html("td")
 allow_html("sup")
 allow_html("img", (('src', 'alt')))
+allow_html("br")
 
 def handle_element(node):
     if node.tag in allowed:
