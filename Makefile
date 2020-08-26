@@ -19,7 +19,7 @@ web/index.xhtml: twir.xhtml toc.py index-skeleton.xhtml
 	$(PYTHON3) toc.py $@ web
 web/twir.epub: twir.epub
 web: $(addprefix web/,$(web_files))
-.PHONY: web
+	touch $@
 
 twir.zip: web
 	rm -f $@ && cd web && zip --quiet ../twir.zip $(web_files)
@@ -86,6 +86,6 @@ clean:
 	rm -f spellcheck bad-words words dictionary all-allowed all-forbidden
 	rm -f twir.epub epub/toc.ncx
 	rm -f epub/twir_[0-9].xhtml epub/twir_[0-9][0-9].xhtml
-	rm -f epubcheck
+	rm -f epubcheck web
 
 .DELETE_ON_ERROR:
