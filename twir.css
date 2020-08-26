@@ -13,6 +13,7 @@ h1,h2,h3,h4 {font-variant: small-caps}
 h1 {font-size: 1.5em}
 h2 {font-size: 1.25em}
 h2::before {display: block; content: url("icon.svg")}
+h2 div {font-size: smaller}
 h3 {font-size: 1em}
 h4 {font-size: 1em; font-weight: normal}
 p, li, blockquote {text-align: justify}
@@ -22,5 +23,4 @@ blockquote strong {font-style: normal}
 hr {border: 0}
 hr::before {content: "★ ★ ★ ★ ★"}
 .author {font-variant: small-caps; font-weight: bold}
-.chapter-number {font-size: smaller}
 /* 2 tables: search for "1 clad", "Stala-Konndjlan" */

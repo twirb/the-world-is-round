@@ -87,10 +87,9 @@ def fix_apostrophes(et):
             e.tail = e.tail.replace("'", "’")
 
 def fix_chapter_numbers(et):
-    for e in et.findall('.//html:div[@class="chapter-number"]', ns):
+    for e in et.findall('.//html:h2/html:div', ns):
         e.tag = 'span'
         e.text += ': '
-        del e.attrib["class"]
 
 def remove_ab(et):
     for e in et.iter():
