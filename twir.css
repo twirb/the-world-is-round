@@ -6,8 +6,7 @@
 */
 q.no-close-quote:after {quotes: none}
 
-body, table {margin: 1em auto; max-width: 48em; text-align: center;
- font-variant-numeric: lining-nums; font-feature-settings: "lnum"; font-family: Georgia}
+body, table {margin: 1em auto; max-width: 48em; text-align: center; font-family: Arial}
 a {color: blue; text-decoration: none}
 a:hover {color: red} a:focus {color: lime; outline: none}
 h1,h2,h3,h4 {font-variant: small-caps}
