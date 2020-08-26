@@ -45,7 +45,7 @@ allow_html("table")
 allow_html("tr")
 allow_html("td")
 allow_html("sup")
-allow_html("img", (('src', 'alt', 'title')))
+allow_html("img", (('src', 'alt', 'title', 'width')))
 allow_html("br")
 
 def handle_element(node):

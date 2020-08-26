@@ -2,8 +2,7 @@ all: spellcheck twir.epub epubcheck twir.zip
 
 PYTHON3 = python3
 
-chapter_numbers = 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19	\
-20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40
+chapter_numbers := $(shell seq 0 41)
 
 ## ------- ##
 ## webpage ##
@@ -11,7 +10,7 @@ chapter_numbers = 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19	\
 
 web_files = \
 	$(patsubst %,twir_%.xhtml,0 $(chapter_numbers)) \
-	cover.png f1.svg f2.svg f3.svg			\
+	cover.png f1.svg f2.svg f3.svg equation.png 	\
 	index.xhtml twir.css twir.epub twir.xhtml
 web/twir_%.xhtml: twir.xhtml split.py
 	$(PYTHON3) split.py $(patsubst twir_%.xhtml,%,$(@F)) $@ web
@@ -33,7 +32,7 @@ epub_files =						\
 	META-INF/container.xml				\
 	content.opf					\
 	cover.png					\
-	icon.svg f1.png f2.png f3.png			\
+	icon.svg f1.png f2.png f3.png equation.png 	\
 	titlepage.xhtml					\
 	toc.ncx						\
 	twir.css
