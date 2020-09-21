@@ -8,20 +8,20 @@ chapter_numbers := $(shell seq 0 42)
 ## webpage ##
 ## ------- ##
 
-web_files = \
+web_files_nodir = \
 	$(patsubst %,twir_%.xhtml,0 $(chapter_numbers)) \
 	cover.png f1.svg f2.svg f3.svg equation.png 	\
 	index.xhtml twir.css twir.epub twir.xhtml
+web_files = $(addprefix web/,$(web_files_nodir))
 web/twir_%.xhtml: twir.xhtml split.py
 	$(PYTHON3) split.py $(patsubst twir_%.xhtml,%,$(@F)) $@ web
 web/index.xhtml: twir.xhtml toc.py index-skeleton.xhtml
 	$(PYTHON3) toc.py $@ web
 web/twir.epub: twir.epub
-web: $(addprefix web/,$(web_files))
-	touch $@
+web: $(web_files)
 
-twir.zip: web
-	rm -f $@ && cd web && zip --quiet ../twir.zip $(web_files)
+twir.zip: $(web_files)
+	rm -f $@ && cd web && zip --quiet ../twir.zip $(web_files_nodir)
 
 ## ---- ##
 ## epub ##
@@ -84,7 +84,9 @@ all-forbidden: forbidden-words
 clean:
 	rm -f spellcheck bad-words words dictionary all-allowed all-forbidden
 	rm -f twir.epub epub/toc.ncx
+	rm -f web/index.xhtml
+	rm -f web/twir_[0-9].xhtml web/twir_[0-9][0-9].xhtml
 	rm -f epub/twir_[0-9].xhtml epub/twir_[0-9][0-9].xhtml
-	rm -f epubcheck web
+	rm -f epubcheck
 
 .DELETE_ON_ERROR:
