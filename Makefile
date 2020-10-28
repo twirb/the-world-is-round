@@ -1,4 +1,4 @@
-all: spellcheck twir.epub epubcheck twir.zip
+all: spellcheck twir.epub epubcheck twir.mobi twir.zip
 
 PYTHON3 = python3
 
@@ -11,13 +11,14 @@ chapter_numbers := $(shell seq 0 42)
 web_files_nodir = \
 	$(patsubst %,twir_%.xhtml,0 $(chapter_numbers)) \
 	cover.png f1.svg f2.svg f3.svg equation.png 	\
-	index.xhtml twir.css twir.epub twir.xhtml
+	index.xhtml twir.css twir.epub twir.mobi twir.xhtml
 web_files = $(addprefix web/,$(web_files_nodir))
 web/twir_%.xhtml: twir.xhtml split.py
 	$(PYTHON3) split.py $(patsubst twir_%.xhtml,%,$(@F)) $@ web
 web/index.xhtml: twir.xhtml toc.py index-skeleton.xhtml
 	$(PYTHON3) toc.py $@ web
 web/twir.epub: twir.epub
+web/twir.mobi: twir.mobi
 web: $(web_files)
 
 twir.zip: $(web_files)
@@ -53,6 +54,13 @@ epubcheck: twir.epub
 		echo "epubcheck not installed, skipping check"; \
 	fi && touch $@
 
+## ---- ##
+## mobi ##
+## ---- ##
+
+twir.mobi: twir.epub
+	ebook-convert twir.epub twir.mobi
+
 ## ------------- ##
 ## Spellchecking ##
 ## ------------- ##
@@ -84,6 +92,7 @@ all-forbidden: forbidden-words
 clean:
 	rm -f spellcheck bad-words words dictionary all-allowed all-forbidden
 	rm -f twir.epub epub/toc.ncx
+	rm -f twir.mobi
 	rm -f web/index.xhtml
 	rm -f web/twir_[0-9].xhtml web/twir_[0-9][0-9].xhtml
 	rm -f epub/twir_[0-9].xhtml epub/twir_[0-9][0-9].xhtml
