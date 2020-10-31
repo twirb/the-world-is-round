@@ -16,8 +16,8 @@ h2::before {display: block; content: url("icon.svg")}
 h2 div {font-size: smaller}
 h3 {font-size: 1em}
 h4 {font-size: 1em; font-weight: normal}
-p, li, blockquote {text-align: justify}
-td {text-align: left}
+p, blockquote {text-align: justify}
+td, li {text-align: left}
 blockquote {font-style: italic}
 blockquote strong {font-style: normal}
 hr {border: 0}
