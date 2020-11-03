@@ -11,7 +11,8 @@ chapter_numbers := $(shell seq 0 42)
 web_files_nodir = \
 	$(patsubst %,twir_%.xhtml,0 $(chapter_numbers)) \
 	cover.png f1.svg f2.svg f3.svg equation.png 	\
-	index.xhtml twir.css twir.epub twir.mobi twir.xhtml
+	icon.svg index.xhtml twir.css twir.epub twir.mobi \
+	twir.xhtml
 web_files = $(addprefix web/,$(web_files_nodir))
 web/twir_%.xhtml: twir.xhtml split.py
 	$(PYTHON3) split.py $(patsubst twir_%.xhtml,%,$(@F)) $@ web
