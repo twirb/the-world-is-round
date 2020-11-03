@@ -15,8 +15,8 @@ web_files_nodir = \
 web_files = $(addprefix web/,$(web_files_nodir))
 web/twir_%.xhtml: twir.xhtml split.py
 	$(PYTHON3) split.py $(patsubst twir_%.xhtml,%,$(@F)) $@ web
-web/index.xhtml: twir.xhtml toc.py index-skeleton.xhtml
-	$(PYTHON3) toc.py $@ web
+web/index.xhtml: web/index-skeleton.xhtml twir.xhtml toc.py
+	$(PYTHON3) toc.py $< $@ xhtml
 web/twir.epub: twir.epub
 web/twir.mobi: twir.mobi
 web: $(web_files)
@@ -28,8 +28,9 @@ twir.zip: $(web_files)
 ## epub ##
 ## ---- ##
 epub_files =						\
-	mimetype \
+	mimetype 					\
 	$(patsubst %,twir_%.xhtml,$(chapter_numbers))	\
+	toc.xhtml	 				\
 	META-INF/container.xml				\
 	content.opf					\
 	cover.png					\
@@ -39,11 +40,12 @@ epub_files =						\
 	twir.css
 twir.epub: $(addprefix epub/,$(epub_files))
 	rm -f $@ && cd epub && zip --quiet -X ../twir.epub $(epub_files)
-
 epub/twir_%.xhtml: twir.xhtml split.py
 	$(PYTHON3) split.py $(patsubst twir_%.xhtml,%,$(@F)) $@ epub
-epub/toc.ncx: twir.xhtml toc.py toc-skeleton.xml
-	$(PYTHON3) toc.py $@ epub
+epub/toc.ncx: epub/toc-skeleton.ncx twir.xhtml toc.py
+	$(PYTHON3) toc.py $< $@ ncx
+epub/toc.xhtml: epub/toc-skeleton.xhtml twir.xhtml toc.py
+	$(PYTHON3) toc.py $< $@ xhtml
 epub/%.png: %.svg
 	convert -density 400 $< $@
 
@@ -59,7 +61,7 @@ epubcheck: twir.epub
 ## ---- ##
 
 twir.mobi: twir.epub
-	ebook-convert twir.epub twir.mobi
+	ebook-convert twir.epub twir.mobi --no-inline-toc
 
 ## ------------- ##
 ## Spellchecking ##
@@ -91,7 +93,7 @@ all-forbidden: forbidden-words
 
 clean:
 	rm -f spellcheck bad-words words dictionary all-allowed all-forbidden
-	rm -f twir.epub epub/toc.ncx
+	rm -f twir.epub epub/toc.ncx epub/toc.xhtml
 	rm -f twir.mobi
 	rm -f web/index.xhtml
 	rm -f web/twir_[0-9].xhtml web/twir_[0-9][0-9].xhtml

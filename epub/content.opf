@@ -11,6 +11,7 @@
     <item href="cover.png" id="cover" media-type="image/png"/>
     <item href="icon.svg" id="icon" media-type="image/svg+xml"/>
     <item href="twir.css" id="page_css" media-type="text/css"/>
+    <item href="toc.xhtml" id="toc" media-type="application/xhtml+xml"/>
     <item href="twir_0.xhtml" id="html0" media-type="application/xhtml+xml"/>
     <item href="twir_1.xhtml" id="html1" media-type="application/xhtml+xml"/>
     <item href="twir_2.xhtml" id="html2" media-type="application/xhtml+xml"/>
@@ -63,6 +64,7 @@
   </manifest>
   <spine toc="ncx">
     <itemref idref="titlepage"/>
+    <itemref idref="toc"/>
     <itemref idref="html0"/>
     <itemref idref="html1"/>
     <itemref idref="html2"/>

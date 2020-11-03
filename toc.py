@@ -11,8 +11,7 @@ def ab_ns(tag):
     return "{%s}%s" % (ns['ab'], tag)
 
 import sys
-output_file = sys.argv[1]
-output_type = sys.argv[2]
+input_file, output_file, output_type = sys.argv[1:]
 
 def chapter_title_text(element):
     tag = element.tag
@@ -54,7 +53,7 @@ def get_content(et):
     
 content = get_content(ET.parse('twir.xhtml'))
 
-if output_type == 'epub':
+if output_type == 'ncx':
     nav_map = ET.Element('navMap')
     for chapter, number in zip(content, range(len(content))):
         nav_point = ET.SubElement(nav_map, 'navPoint',
@@ -67,17 +66,19 @@ if output_type == 'epub':
                       {'src': 'twir_%d.xhtml' % number})
 
     ET.register_namespace('', 'http://www.daisy.org/z3986/2005/ncx/')
-    output = ET.parse('toc-skeleton.xml')
+    output = ET.parse(input_file)
     output.getroot().append(nav_map)
     output.write(output_file, encoding='UTF-8', xml_declaration=True)
-elif output_type == 'web':
+elif output_type == 'xhtml':
     ET.register_namespace('', ns['html'])
     ET.register_namespace('ab', ns['ab'])
-    output = ET.parse('index-skeleton.xhtml')
+    output = ET.parse(input_file)
     nav = output.find('.//html:ul[@id="toc"]', ns)
     for chapter, number in zip(content, range(len(content))):
         item = ET.SubElement(nav, 'li')
         a = ET.SubElement(item, 'a', {'href': 'twir_%d.xhtml' % number})
         a.text = chapter['title']
     output.write(output_file, encoding='UTF-8', xml_declaration=True)
-    
+else:
+    sys.stderr.write("unknown output format %s" % output_type)
+    sys.exit(1)
