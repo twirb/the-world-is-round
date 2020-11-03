@@ -111,5 +111,6 @@
   </spine>
   <guide>
     <reference href="titlepage.xhtml" title="Cover" type="cover"/>
+    <reference type="text" title="Startup Page" href="twir_0.xhtml"/>
   </guide>
 </package>
