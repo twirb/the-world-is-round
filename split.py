@@ -127,7 +127,8 @@ html = et.find('.', ns)
 title = et.find('./html:head/html:title', ns)
 title.text += ', %s' % content[target_chapter]['title']
 
-if output_type == 'web':
+def nav(which):
+    dropdown_id = 'nav-dropdown-%s' % which
     nav = ET.Element('nav')
     if target_chapter > 0:
         prev = ET.SubElement(nav, 'a',
@@ -135,9 +136,9 @@ if output_type == 'web':
         prev.text = '« Prev'
         prev.tail = ' '
     select = ET.SubElement(nav, 'select',
-                           {'id': 'nav-dropdown',
+                           {'id': dropdown_id,
                             'onchange': '''\
-var e = document.getElementById("nav-dropdown"); \
+var e = document.getElementById("''' + dropdown_id + '''"); \
 window.location.href = e.options[e.selectedIndex].value;\
 '''})
     select.tail = ' '
@@ -152,17 +153,16 @@ window.location.href = e.options[e.selectedIndex].value;\
         next = ET.SubElement(nav, 'a',
                              {'href': 'twir_%d.xhtml' % (target_chapter + 1)})
         next.text = 'Next »'
-else:
-    nav = None
+    return nav
 
 # Remove existing body.
 html.remove(et.find('./html:body', ns))
 
 # Insert new body.
 body = ET.SubElement(html, 'body')
-if nav:
-    body.append(nav)
+if output_type == 'web':
+    body.append(nav('top'))
 body.extend(content[target_chapter]['content'])
-if nav:
-    body.append(nav)
+if output_type == 'web':
+    body.append(nav('bottom'))
 et.write(output_file, encoding='UTF-8', xml_declaration=True)
